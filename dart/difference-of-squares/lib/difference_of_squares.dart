@@ -28,4 +28,24 @@ class DifferenceOfSquares {
     print(result);
     return result;
   }
+
+
 }
+
+//The most liked solution in exercism. 
+
+class DifferenceOfSquare{
+  //list
+  Iterable<int> list(int val)=> new Iterable.generate(val, ((index) => index +1));
+  //square
+  int square(int val) => val * val;
+  //sum
+  int sum(int left, int right)=> left + right;
+
+  int squareOfSums(int number) => square(list(number).reduce(sum));
+
+  int sumsOfSquare(int number)=> list(number).map(square).reduce(sum);
+
+  int differenceOfSquares(int number)=> squareOfSums(number) - sumsOfSquare(number);
+}
+
