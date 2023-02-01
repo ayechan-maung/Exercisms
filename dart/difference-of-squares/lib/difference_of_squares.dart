@@ -49,3 +49,9 @@ class DifferenceOfSquare{
   int differenceOfSquares(int number)=> squareOfSums(number) - sumsOfSquare(number);
 }
 
+void main(List<String> args) {
+  final difference = DifferenceOfSquare();
+
+  print("difference ${difference.differenceOfSquares(100)}");
+}
+
